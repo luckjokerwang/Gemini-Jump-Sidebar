@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Jump Sidebar",
+  "description": "检测用户提问并在侧边栏列出，点击可快速跳回并高亮对应问题。",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+
+}

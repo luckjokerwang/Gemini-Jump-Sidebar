@@ -1,0 +1,60 @@
+/* 侧边栏基础样式 */
+.gj-sidebar {
+  position: fixed;
+  right: 8px;
+  top: 80px;
+  width: 320px;
+  max-height: calc(100vh - 160px);
+  background: rgba(255,255,255,0.98);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 12px;
+  z-index: 2147483647;
+  overflow: auto;
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #111;
+}
+
+/* 标题 */
+.gj-sidebar h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 条目列表 */
+.gj-list { list-style: none; margin: 0; padding: 0; }
+.gj-item {
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.08s;
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+.gj-item:hover { background: rgba(0,0,0,0.04); transform: translateY(-1px); }
+
+/* 短文本与meta */
+.gj-content { font-size: 13px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-box-orient: vertical; }
+.gj-meta { font-size: 11px; color: #666; margin-top: 6px; }
+
+/* 高亮动画（跳转后在页面高亮目标） */
+.gj-highlight {
+  box-shadow: 0 0 0 4px rgba(250,200,0,0.25) inset;
+  transition: box-shadow 0.4s ease;
+}
+
+/* 小工具按钮 */
+.gj-controls { display:flex; gap:8px; margin-bottom:8px; }
+.gj-btn {
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size:12px;
+  cursor:pointer;
+  background: #fff;
+}
+.gj-search { flex:1; padding:6px 8px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); font-size:13px; }
