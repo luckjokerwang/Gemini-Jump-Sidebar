@@ -1,11 +1,11 @@
 /* 侧边栏基础样式 */
 .gj-sidebar {
   position: fixed;
-  right: 8px;
+  right: 0px;
   top: 80px;
-  width: 320px;
+  width: 198px;
   max-height: calc(100vh - 160px);
-  background: rgba(255,255,255,0.98);
+  background: rgba(0, 0, 0, 0.98);
   border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 6px 24px rgba(0,0,0,0.12);
   border-radius: 12px;
@@ -13,7 +13,7 @@
   z-index: 2147483647;
   overflow: auto;
   font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #111;
+  color: #f0f0f0;
 }
 
 /* 标题 */
@@ -55,6 +55,6 @@
   border-radius: 8px;
   font-size:12px;
   cursor:pointer;
-  background: #fff;
+  background: #b09a9a;
 }
-.gj-search { flex:1; padding:6px 8px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); font-size:13px; }
+.gj-search { flex:1; padding:3px 3px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); font-size:12px; }

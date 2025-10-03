@@ -1,17 +1,4 @@
 
-// 假设这是对话框元素
-const inputBox = document.querySelector("textarea");
-
-// 改变背景颜色（比如白色）
-inputBox.style.backgroundColor = "#000";
-
-// 改变字体颜色
-inputBox.style.color = "#f0f0f0";
-
-// 把大小缩小为原来的 1/2
-inputBox.style.transform = "scale(0.5)";
-inputBox.style.transformOrigin = "top left";
-
 // content_script.js
 (function () {
   if (window.__gj_sidebar_injected) return;
@@ -288,3 +275,10 @@ inputBox.style.transformOrigin = "top left";
 
   console.log('Gemini Jump Sidebar injected.');
 })();
+// ---- 页面刷新时清空侧边栏记录 ----
+window.addEventListener('beforeunload', () => {
+  entries = [];
+  try {
+    chrome.storage && chrome.storage.local && chrome.storage.local.set({ gj_entries: [] });
+  } catch (e) { /* ignore */ }
+});
